@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Library"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525" Closing="Window_Closing" Loaded="Window_Loaded">
     <Grid>
-        
+        <Menu x:Name="menu" Height="23" VerticalAlignment="Top" RenderTransformOrigin="0.486,0.458">
+            <MenuItem x:Name="menuFile" Header="Файл" Height="23"/>
+            <MenuItem x:Name="Вид" Header="Вид">
+                <MenuItem Header="Увеличить"/>
+                <MenuItem Header="Уменьшить"/>
+                <Separator/>
+                <MenuItem Header="Изменить тему"/>
+            </MenuItem>
+            <MenuItem Header="О библиотеке" >
+                <MenuItem Header="История"/>
+                <MenuItem Header="Контакты"/>
+            </MenuItem>
+        </Menu>
+        <DataGrid x:Name="dataGrid" Margin="0,23,0,0" MinColumnWidth="100" CanUserResizeColumns="False" CanUserReorderColumns="False" IsReadOnly="True" CanUserResizeRows="False" CanUserDeleteRows="False" CanUserAddRows="False"/>
+
     </Grid>
 </Window>
